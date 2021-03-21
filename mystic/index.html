@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Date of Death</title>
+</head>
+
+<body>
+    <section class="intro">
+        <div class="container">
+            <header class="header">
+                <p class="header__text center subtitle">Лучшие астрологи и экстрасенсы Румынии</p>
+                <div class="header__line"></div>
+            </header>
+            <h2 class="intro__title center">Точность прогноза: 97%</h2>
+            <div class="intro__photo center"><img class="intro__girl" src="img/intro-girl.png" alt="girl"></div>
+            <div class="intro__question-wrapper center">
+                <p class="intro__question center">Вас беспокоит вопрос о том, <br>
+                    <span class="intro__question-part question">когда Вы покинете этот Мир и при каких
+                        обстоятельствах?</span>
+                </p>
+                <button class="intro__btn btn btn-yes">Да</button>
+                <button class="intro__btn btn btn-no">Нет</button>
+            </div>
+            <p class="intro__text center subtitle">Онлайн предсказание</p>
+        </div>
+    </section>
+    <section class="test">
+        <div class="container">
+            <div class="test__intro animItems">
+                <img class="test__intro-photo" src="img/hands.png" alt="hands">
+                <p class="test__intro-text center">Позвольте нам раскрыть эту волнующую тайну и <br>
+                    <span class="test__intro-part">с точностью определить дату и время вашей смерти,</span> а также
+                    предшествующую этому событию причину
+                </p>
+            </div>
+            <div class="test__photo-wrapper animItems">
+                <p class="test__photo-text center">Многие не верят предсказаниям и мы решили доказать каждому, <br>
+                    <span class="test__photo-part">что прогноз может изменить жизнь любого человека!</span>
+                </p>
+            </div>
+            <div class="test__questions-wrapper animItems">
+                <div class="test__questions-item center fadeIn active" id="firstQuestion" data-number="1">
+                    <p class="test__question question">Боитесь ли вы умереть?</p>
+                    <button class="test__btn btn btn-yes">Да</button>
+                    <button class="test__btn btn btn-no">Нет</button>
+                </div>
+                <div class="test__questions-item center" id="secondQuestion" data-number="2">
+                    <p class="test__questions-item-desc subtitle">Мы расскажем вам не только подробности вашей смерти,
+                        но также
+                        поможем вам избежать этой ужасной даты и продлить вашу жизнь на многие годы.</p>
+                    <div class="test__line"></div>
+                    <p class="test__question question">Когда Вы чувствуете себя наиболее комфортно?</p>
+                    <button class="test__btn btn btn-yes">Утро</button>
+                    <button class="test__btn btn btn-no">День</button>
+                    <button class="test__btn btn btn-no">Вечер</button>
+                    <button class="test__btn btn btn-no">Ночь</button>
+                </div>
+                <div class="test__questions-item center" id="thirdQuestion" data-number="3">
+                    <p class="test__questions-item-desc subtitle">Уже совсем скоро Вы узнаете много интересного о своем
+                        будущем!</p>
+                    <div class="test__line"></div>
+                    <p class="test__question question">Укажите свою дату рождения:</p>
+                    <select name="day" id="day" class="btn select">
+                        <option value="" disabled selected>День</option>
+                    </select>
+                    <select name="month" id="month" class="btn select">
+                        <option value="" disabled selected>Месяц</option>
+                    </select>
+                    <select name="year" id="year" class="btn select">
+                        <option value="" disabled selected>Год</option>
+                    </select>
+                    <button class="btn btn-no" id="selectBtn">Далее</button>
+                </div>
+                <div class="test__questions-item loader" id="loader" data-number="4">
+                    <div class="loader__inner center">
+                        <div class="lds-spinner">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <p class="loader__subtitle subtitle">Loading</p>
+                    </div>
+                </div>
+                <div class="test__questions-item center" id="fourthQuestion" data-number="4">
+                    <p class="test__questions-item-desc subtitle">Смерть родного человека – одно из тяжелейших испытаний
+                        в жизни каждого из нас!</p>
+                    <div class="test__line"></div>
+                    <p class="test__question question">Снятся ли вам умершие люди?</p>
+                    <button class="test__btn btn btn-yes">Да</button>
+                    <button class="test__btn btn btn-no">Нет</button>
+                    <button class="test__btn btn btn-no">Иногда</button>
+                </div>
+                <div class="test__questions-item center" id="fifthQuestion" data-number="5">
+                    <p class="test__questions-item-desc subtitle">По вам скучает очень близкий человек, которого больше
+                        нет в мире живых. <br>
+                        <span class="test__questions-item-ageText middleAge subtitle">Возможно
+                            это дедушка или бабушка.</span>
+                        <span class="test__questions-item-ageText oldAge subtitle">Возможно
+                            это кто-то из Ваших родителей.</span>
+                    </p>
+                    <div class="test__line"></div>
+                    <p class="test__question question">Запись, которую Вы услышите, может шокировать людей с
+                        неокрепшей психикой. Вы готовы узнать, что ждет именно Вас?</p>
+                    <button class="test__btn btn btn-yes pre-micro-btn">Да</button>
+                    <button class="test__btn btn btn-no pre-micro-btn">Затрудняюсь ответить</button>
+                </div>
+                <div class="test__questions-item center micro" id="micro">
+                    <img class="micro__photo" src="img/microphone.svg" alt="micro">
+                    <div class="micro__inner"></div>
+                    <p class="subtitle micro__text">Запись сообщения</p>
+                </div>
+                <div class="test__questions-item phoneCall center" id="phoneCall">
+                    <p class="test__questions-item-desc">Спасибо за Ваши ответы! <br>
+                        <span>Мы подготовили для Вас персональную аудио запись с Вашим прогнозом.</span>
+                    </p>
+                    <p class="phoneCall__text">Вы можете узнать, как повлиять на события, которые ожидают вас в
+                        ближайшем будущем.
+                    </p>
+                    <p class="phoneCall__goldenText"><span class="phoneCall__partText"></span>вам надо быть готовым, что
+                        бы последствия не оказались необратимыми.</p>
+                    <div class="phoneCall__text">Нажмите на кнопку ниже прямо сейчас и наберите наш номер
+                        телефона.
+                        Прослушайте важную информацию!</div>
+                    <button class="phoneCall__btn">Позвонить и прослушать</button>
+                </div>
+            </div>
+            <div class="test__questions-number center animItems"><span class="subtitle">Вопрос 1-5</span></div>
+        </div>
+    </section>
+    <div class="container runes__external-container">
+        <section class="runes animItems">
+            <div class="container">
+                <div class="runes__inner center">
+                    <img class="rune" src="img/rune1.svg" width="56" height="17" alt="rune">
+                    <div class="runes__proverb">
+                        <p class="runes__proverb-text">
+                            Вы, конечно, умрете. <br>
+                            И все, с кем вы знакомы, <br>
+                            тоже однажды умрут.</p>
+                    </div>
+                    <img class="rune" src="img/rune2.svg" width="56" height="17" alt="rune">
+                    <!-- <img class="runes__img-eye" src="img/runes-eye.svg" alt="eye">
+                    <img class="runes__img-earth" src="img/runes-earth.svg" alt="earth"> -->
+                </div>
+                <img class="runes__img-eye" src="img/runes-eye.svg" alt="eye">
+                <img class="runes__img-earth" src="img/runes-earth.svg" alt="earth">
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text firstText center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                omnis vero nihil, illo itaque tenetur esse eaque blanditiis aliquam dignissimos, quia nam. Quaerat,
+                libero, impedit quidem sint mollitia reiciendis ducimus cumque incidunt esse natus voluptatibus corrupti
+                a earum quae? Quae obcaecati nobis vel porro odit. Placeat vitae illo nesciunt facilis. Reiciendis nihil
+                ipsam amet voluptas, similique obcaecati? Illo iste ducimus fugit mollitia quibusdam tenetur explicabo
+                iusto odit ab inventore sapiente laudantium natus perferendis possimus beatae, atque similique ut!
+                Mollitia, error nobis quos dolores corporis ducimus incidunt doloremque ratione dignissimos cumque quo,
+                distinctio molestiae at dolorum quod. Asperiores, temporibus error. Aliquid!</p>
+            <p class="footer__text secondText center animItems">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam
+                omnis vero nihil, illo itaque tenetur esse eaque blanditiis aliquam dignissimos, quia nam. Quaerat,
+                libero, impedit quidem sint mollitia reiciendis ducimus cumque incidunt esse natus voluptatibus corrupti
+                a earum quae? Quae obcaecati nobis vel porro odit. Placeat vitae illo nesciunt facilis. Reiciendis nihil
+                ipsam amet voluptas, similique obcaecati? Illo iste ducimus fugit mollitia quibusdam tenetur explicabo
+                iusto odit ab inventore sapiente laudantium natus perferendis possimus beatae, atque similique ut!
+                Mollitia, error nobis quos dolores corporis ducimus incidunt doloremque ratione dignissimos cumque quo,
+                distinctio molestiae at dolorum quod. Asperiores, temporibus error. Aliquid!</p>
+        </div>
+    </footer>
+    <div class="modal-wrapper disabled">
+        <div class="modal">
+            <img class="modal__close" src="img/close.svg" height="25" width="25" alt="x">
+            <h3 class="modal__title center">Информация:</h3>
+            <div class="modal__info">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/progressbar.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
